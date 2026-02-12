@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "@xyflow/react/dist/style.css";
+import "@mantine/core/styles.css";
+import { MantineProvider } from "@mantine/core";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MantineProvider>{children}</MantineProvider>
+      </body>
     </html>
   );
 }
